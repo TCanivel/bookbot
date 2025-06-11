@@ -21,7 +21,7 @@ def charc_and_count(file_contents):
                 charc_count_dict[letter] = 1
             else:
                 charc_count_dict[letter] += 1
-    print(charc_count_dict)
+    return charc_count_dict
             
 
 
