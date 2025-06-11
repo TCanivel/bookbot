@@ -6,7 +6,15 @@ def get_book_text(path_to_file):
     
     return file_contents
 
+def words_in_text(file_contents):
+    words = file_contents.split()
+
+    for word in words:
+        total_words = word + 1
+
+    return total_words
+
 def main():
-    print(get_book_text(path_to_file))
+    print(words_in_text(file_contents))
 
 main()
