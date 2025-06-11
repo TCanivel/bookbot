@@ -8,13 +8,11 @@ def get_book_text(path_to_file):
 
 def words_in_text(file_contents):
     words = file_contents.split()
-
-    for word in words:
-        total_words = word + 1
-
-    return total_words
+    num_words = len(words)
+    print(f"{num_words} words found in the document")
 
 def main():
-    print(words_in_text(file_contents))
+    file_contents = get_book_text(path_to_file)
+    words_in_text(file_contents)
 
 main()
