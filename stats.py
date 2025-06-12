@@ -1,18 +1,18 @@
-path_to_file = "books/frankenstein.txt"
-
 def get_book_text(path_to_file):
     with open(path_to_file) as f:
         file_contents = f.read()  
     return file_contents
 
-def get_num_words(file_contents):
-    words = file_contents.split()
+    book_text = get_book_text(path_to_file)
+
+def get_num_words(book_text):
+    words = book_text.split()
     num_words = len(words)
     return num_words
 
-def charc_and_count(file_contents):
+def charc_and_count(book_text):
     charc_count_dict = {}
-    words = file_contents.split()
+    words = book_text.split()
     for word in words:
         lower_case_word = word.lower()
         for letter in lower_case_word:
@@ -41,5 +41,3 @@ def main():
     get_num_words(file_contents)
     charc_and_count(file_contents)
     dict_organize(file_contents)
-
-main()
